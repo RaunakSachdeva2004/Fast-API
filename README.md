@@ -61,6 +61,17 @@ The server will be available at `http://127.0.0.1:8000`.
   }
   ```
 
+### About Endpoint
+- Method: `GET`
+- Path: `/about`
+- Description: Returns an informational message.
+- Response:
+  ```json
+  {
+    "message": "about message"
+  }
+  ```
+
 ## Interactive Documentation
 
 FastAPI automatically generates interactive API documentation. When the application is running, navigate to:
