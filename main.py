@@ -37,6 +37,16 @@ class Patient(BaseModel):
             return 'Obese'
 
 
+class PatientUpdate(BaseModel):
+    name: Annotated[Optional[str], Field(default=None)]
+    city: Annotated[Optional[str], Field(default=None)]
+    age: Annotated[Optional[int], Field(default=None, gt=0)]
+    gender: Annotated[Optional[Literal['male', 'female']], Field(default=None)]
+    height: Annotated[Optional[float], Field(default=None, gt=0)]
+    weight: Annotated[Optional[float], Field(default=None, gt=0)]
+
+
+
 def load_data():
     with open('patients.json', 'r') as f:
         data = json.load(f)
