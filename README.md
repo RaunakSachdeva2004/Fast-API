@@ -57,20 +57,50 @@ The server will be available at `http://127.0.0.1:8000`.
 - Response:
   ```json
   {
-    "message": "hello world"
+    "message": "Patient Management System API"
   }
   ```
 
 ### About Endpoint
 - Method: `GET`
 - Path: `/about`
-- Description: Returns an informational message.
+- Description: Returns an informational message about the API.
 - Response:
   ```json
   {
-    "message": "about message"
+    "message": "A fully functional API to manage your patient records"
   }
   ```
+
+### View All Patients Endpoint
+- Method: `GET`
+- Path: `/view`
+- Description: Returns a list of all patients in the system.
+
+### View Specific Patient Endpoint
+- Method: `GET`
+- Path: `/patient/{patient_id}`
+- Description: Returns the details of a specific patient.
+
+### Sort Patients Endpoint
+- Method: `GET`
+- Path: `/sort`
+- Description: Returns a list of patients sorted by height, weight, or bmi. Accepts `sort_by` and `order` query parameters.
+
+### Create Patient Endpoint
+- Method: `POST`
+- Path: `/create`
+- Description: Creates a new patient record in the system.
+
+### Edit Patient Endpoint
+- Method: `PUT`
+- Path: `/edit/{patient_id}`
+- Description: Updates the information of an existing patient.
+
+### Delete Patient Endpoint
+- Method: `DELETE`
+- Path: `/delete/{patient_id}`
+- Description: Deletes a patient record from the system.
 
 ## Interactive Documentation
 
